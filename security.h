@@ -6,7 +6,9 @@
 class Security
 {
 public:
-    static double calculateNumberOfCellsForDesiredSecurity( double desiredSecurityLevel, double population, bool sp2hdm );
+    static double calculateNumberOfCellsForDesiredSecurity( double desiredSecurityLevel,
+                                                            double population,
+                                                            bool sp2hdm );
 
     static float calculatePopulationLevel( double population, bool sp2hdm );
 };

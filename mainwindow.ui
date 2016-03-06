@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>348</width>
+    <width>400</width>
     <height>550</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>348</width>
+    <width>400</width>
     <height>550</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>SuperPower 2 Covert Planning Tool 2</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QFormLayout" name="formLayout_2">
@@ -43,10 +43,17 @@
     <item row="0" column="1">
      <widget class="QRadioButton" name="sp2RadioButton">
       <property name="text">
-       <string>SP2 1.5.1</string>
+       <string>SP2 V1.5.1</string>
       </property>
       <property name="checked">
        <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" colspan="2">
+     <widget class="QLabel" name="label_15">
+      <property name="text">
+       <string>Copyright D.Z. (&quot;BlasterMillennia&quot;). All rights reserved.</string>
       </property>
      </widget>
     </item>
@@ -119,6 +126,16 @@
           </property>
          </widget>
         </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Desired security level (between 0% and 94.9%):</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
         <item row="4" column="1">
          <widget class="QLabel" name="eliteCellsNeededLabel">
           <property name="font">
@@ -129,16 +146,6 @@
           </property>
           <property name="text">
            <string>0</string>
-          </property>
-         </widget>
-        </item>
-        <item row="2" column="0">
-         <widget class="QLabel" name="label_3">
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;Desired security level&lt;br/&gt;(between 0% and 94.9%):&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -332,6 +339,59 @@
           </property>
          </widget>
         </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="text">
+           <string>Chance of assassinating a random enemy cell:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QLabel" name="assassinationChanceLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>0%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="text">
+           <string>If success, maximum probability of target discovering perpetrator, even if self-targeting:</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1">
+         <widget class="QLabel" name="perpetratorDiscoveredLabel">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>0%</string>
+          </property>
+         </widget>
+        </item>
+        <item row="9" column="0" colspan="2">
+         <widget class="QLabel" name="label_13">
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If failure, the probability of capture is always &lt;span style=&quot; font-weight:600;&quot;&gt;33%&lt;/span&gt;, even if self-targeting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
         <item row="6" column="1">
          <widget class="QLabel" name="successRateRangeLabel">
           <property name="font">
@@ -345,48 +405,8 @@
           </property>
          </widget>
         </item>
-        <item row="7" column="0">
-         <widget class="QLabel" name="label_12">
-          <property name="text">
-           <string>If success, maximum probability of target discovering perpetrator, even if self-targeting:</string>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="7" column="1">
-         <widget class="QLabel" name="perpetratorDiscoveredLabel">
-          <property name="font">
-           <font>
-            <weight>75</weight>
-            <bold>true</bold>
-           </font>
-          </property>
-          <property name="text">
-           <string>0%</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="0" colspan="2">
-         <widget class="QLabel" name="label_13">
-          <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If failure, the probability of capture is always &lt;span style=&quot; font-weight:600;&quot;&gt;33%&lt;/span&gt;, even if self-targeting.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item row="3" column="0" colspan="2">
-     <widget class="QLabel" name="label_15">
-      <property name="text">
-       <string>Copyright D.Z. (&quot;BlasterMillennia&quot;). All rights reserved.</string>
-      </property>
      </widget>
     </item>
    </layout>

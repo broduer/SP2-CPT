@@ -139,8 +139,9 @@ void MainWindow::calculateSuccessButtonClicked( void ) const
 
     bool framing = this->ui->framingCheckBox->isChecked();
 
-    auto probabilities = Mission::findMissionProbabilities( targetingSelf, trainingLevel, otherCells, missionType, missionComplexity, specificSector, targetStability, framing );
+    auto probabilities = Mission::findMissionProbabilities( targetingSelf, trainingLevel, otherCells, missionType, missionComplexity, specificSector, targetStability, framing, this->ui->sp2hdmRadioButton->isChecked() );
 
-    this->ui->successRateRangeLabel->setText( QString::number( probabilities.m_minimumSuccessRate*100, 'f', 0 ) + "% to " + QString::number( probabilities.m_maximumSuccessRate*100, 'f', 0 )  + '%' );
+    this->ui->successRateRangeLabel->setText( QString::number( probabilities.m_minimumSuccessRate*100, 'f', 0 ) + "% to " + QString::number( probabilities.m_maximumSuccessRate*100, 'f', 0 ) + '%' );
+    this->ui->assassinationChanceLabel->setText( QString::number( probabilities.m_chanceOfAsssassinatingEnemyCell*100, 'f', 0 ) + '%' );
     this->ui->perpetratorDiscoveredLabel->setText( QString::number( probabilities.m_maximumFoundOutProbability*100, 'f', 0 ) + '%' );
 }

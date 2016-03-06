@@ -31,10 +31,20 @@ public:
         float m_minimumSuccessRate;
         float m_maximumSuccessRate;
 
+        float m_chanceOfAsssassinatingEnemyCell;
+
         float m_maximumFoundOutProbability;
     };
 
-    static Probabilities findMissionProbabilities( bool targetingSelf, Covert::CellTrainingLevel level, std::map< Covert::CellTrainingLevel, int >& otherCells, MissionType type, MissionComplexity complexity, bool specificSector, double targetStability, bool framing );
+    static Probabilities findMissionProbabilities( bool targetingSelf,
+                                                   Covert::CellTrainingLevel level,
+                                                   std::map< Covert::CellTrainingLevel, int >& otherCells,
+                                                   MissionType type,
+                                                   MissionComplexity complexity,
+                                                   bool specificSector,
+                                                   double targetStability,
+                                                   bool framing,
+                                                   bool sp2hdm );
 
 private:
     static const float MaximumSuccessRate;

@@ -27,5 +27,4 @@ HEADERS  += mainwindow.h \
 
 FORMS    += mainwindow.ui
 
-# Qt 5.4 has an issue where CONFIG += c++14 doesn't work
-QMAKE_CXXFLAGS += -std=c++14
+CONFIG += c++14

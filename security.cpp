@@ -7,11 +7,14 @@
 #include "covert.h"
 #include "security.h"
 
-double Security::calculateNumberOfCellsForDesiredSecurity( double desiredSecurityLevel, double population, bool sp2hdm )
+double Security::calculateNumberOfCellsForDesiredSecurity( double desiredSecurityLevel,
+                                                           double population,
+                                                           bool sp2hdm )
 {
-    static const double precision = 0.05;
+    // If desired security is this close enough to 0, then treat it as 0.
+    static const double securityLevelPrecision   = 0.05;
 
-    if ( desiredSecurityLevel < precision )
+    if ( desiredSecurityLevel < securityLevelPrecision )
     {
         return 0;
     }
@@ -26,12 +29,15 @@ double Security::calculateNumberOfCellsForDesiredSecurity( double desiredSecurit
     // t = average training level of cells in country (<=2)
     // p = population level (<=12 for SP2 1.5.1)
 
-    // n = log( 1 - s/M ) / log( 1 - t/(p+1) )
+    // So
+    // n = log( 1 - s(n)/M ) / log( 1 - t/(p+1) )
 
     auto populationLevel = Security::calculatePopulationLevel( population, sp2hdm );
 
-    if ( ( sp2hdm && ( populationLevel == 1 ) ) ||
-        ( !sp2hdm && ( populationLevel - 1 <= precision ) ) )
+    // If population level is this close enough to 1, then treat it as 1.
+    static const double populationLevelPrecision = 0.05;
+
+    if ( std::abs( populationLevel - 1 ) <= populationLevelPrecision )
     {
         eliteCellsNeeded = 1;
     }
